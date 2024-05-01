@@ -1,0 +1,236 @@
+@primary-color: #4e5053;
+@secondary-color: #6c757d;
+@color-h3: #ffffff;
+@bg-h3: #727e8b;
+@first-tr: #fefefe;
+@second-tr: #dce7f8;
+@background-table: #dbdcdd;
+@alarm-color: #b76969;
+@button-color: #4762d5;
+@font-size-base: 16px;
+@border-radius: 4px;
+
+.wrap.block-systems-hm {
+  form{
+    color: @primary-color;
+    h3{
+      text-align: center;
+      color: @color-h3;
+      background: @bg-h3;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 1rem;
+    }
+    input[type="text"],select{
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+
+.mb-4{margin-bottom: 1rem}
+.edit-link{
+  font-weight: bold;
+}
+
+.flex{ display: flex;}
+  #selected-posts{
+    margin-bottom: 1rem;
+    span{
+      font-weight: 600;
+    }
+  }
+.basic-option{
+  .left{flex: 1}
+  .right{}
+}
+.template{
+  .data{
+    width: 100%;
+    overflow: auto;
+  }
+
+  .data-html{
+    width: 90%;
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+    code {
+      font-family: monospace;
+      font-size: 14px;
+    }
+  }
+}
+.place-option{
+  .row-place-option{
+    display: flex;
+    justify-content: center;
+    label{
+      padding: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+.anchor-field{
+  display: flex;
+  align-items: center;
+  .row-title-data{
+    flex-direction: column;
+
+    .title{
+      margin-bottom: 1rem;
+    }
+
+  }
+}
+.filter-option{
+  .select-rubrics-tags{
+    display: flex;
+    justify-content: space-around;
+  }
+  .filter-bar{
+    padding-right: 1rem;
+    input[type="text"],select{width: 100%;}
+  }
+  .select{
+    display: flex;
+    .select-post{flex: 1;}
+    .search-container{
+      display: flex;
+      align-items: end;
+      margin-bottom: 1rem;
+      .dashicons{
+        font-size: 27px;
+        cursor:pointer;
+      }
+      .wrap-filter-name{
+        width: 100%;
+        padding-right: 2rem;
+        div{display: flex; align-items: center}
+        input{
+          width: 100%;
+          margin-bottom: 4px;
+        }
+      }
+      .sort{
+        text-align: center;
+        .title{
+          font-size: 1rem;
+          margin-bottom: .5rem;
+        }
+      }
+    }
+  }
+}
+.flag-require{color: @alarm-color; font-size: 1.3rem; padding-left: 4px}
+.table-title-data{
+
+  .row-title-data{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    .title{min-width: 150px;}
+    .data{
+      flex: 1;
+      input[type="text"],textarea{ width: 90%;}
+    }
+  }
+}
+
+// pagination
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  a,
+  span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &.current {
+      color: #fff;
+      background-color: #337ab7;
+      border-color: #337ab7;
+      cursor: default;
+    }
+
+    &.prev,
+    &.next {
+      font-weight: normal;
+    }
+
+    &.prev {
+      margin-right: 10px;
+    }
+
+    &.next {
+      margin-left: 10px;
+    }
+  }
+}
+  .wp-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: @first-tr;
+    color: @primary-color;
+    .dashicons-trash{
+      color: @alarm-color;
+    }
+    th, td {
+      padding: 6px 10px;
+      font-size: 16px;
+      text-align: left;
+      label{
+        cursor:pointer;
+      }
+    }
+    th {
+      background-color: @first-tr;
+      font-weight: bold;
+    }
+    tr td:first-child{width: auto}
+    tr:nth-child(even) {
+      background-color: @second-tr;
+    }
+  }
+  .table-inner{
+    background: @background-table ;
+  }
+  .block_systems_hn h2,
+  .block_systems_hn h3{
+    background: none;
+  }
+}
+@media (max-width: 576px) {
+  .wrap.block-systems-hm{
+    flex-wrap: wrap;
+    a,
+    span {
+      margin: 4px;
+    }
+  }
+
+}
+
+
+
+
+
+
